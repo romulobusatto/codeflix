@@ -74,12 +74,11 @@ class GenreTest extends TestCase
     public function testDelete()
     {
         //** @var Genre $model */
-        $model = factory(Genre::class)->create([
-            'is_active' => false
-        ]);
-        $id = $model->id;
+        $model = factory(Genre::class)->create();
         $model->delete();
+        $this->assertNull(Genre::find($model->id));
 
-        $this->assertNull(Genre::find($id));
+        $model->restore();
+        $this->assertNotNull(Genre::find($model->id));
     }
 }

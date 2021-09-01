@@ -91,12 +91,12 @@ class CategoryTest extends TestCase
     public function testDelete()
     {
         //** @var Category $category */
-        $model = factory(Category::class)->create([
-            'is_active' => false
-        ]);
-        $id = $model->id;
-        $model->delete();
+        $model = factory(Category::class)->create();
 
-        $this->assertNull(Category::find($id));
+        $model->delete();
+        $this->assertNull(Category::find($model->id));
+
+        $model->restore();
+        $this->assertNotNull(Category::find($model->id));
     }
 }
