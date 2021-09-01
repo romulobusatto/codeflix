@@ -59,7 +59,7 @@ class GenreTest extends TestCase
         //** @var Genre $model */
         $model = factory(Genre::class)->create([
             'is_active' => false
-        ])->first();
+        ]);
         $data = [
             'name' => 'test_name_updated',
             'is_active' => true
@@ -76,7 +76,7 @@ class GenreTest extends TestCase
         //** @var Genre $model */
         $model = factory(Genre::class)->create([
             'is_active' => false
-        ])->first();
+        ]);
         $id = $model->id;
         $model->delete();
 
