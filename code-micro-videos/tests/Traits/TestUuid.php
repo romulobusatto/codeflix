@@ -1,10 +1,10 @@
 <?php
 
-namespace Tests;
+namespace Tests\Traits;
 
 use Ramsey\Uuid\Uuid as RamseyUuid;
 
-trait Uuid
+trait TestUuid
 {
     public function assertIsUuid($condition)
     {

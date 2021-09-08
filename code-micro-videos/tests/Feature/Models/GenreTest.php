@@ -5,12 +5,12 @@ namespace Tests\Feature\Models;
 use App\Models\Genre;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Tests\TestCase;
-use Tests\Uuid;
+use Tests\Traits\TestUuid;
 
 class GenreTest extends TestCase
 {
     use DatabaseMigrations;
-    use Uuid;
+    use TestUuid;
 
     public function testList()
     {
