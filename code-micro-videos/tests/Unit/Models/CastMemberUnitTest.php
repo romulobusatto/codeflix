@@ -47,6 +47,16 @@ class CastMemberUnitTest extends TestCase
         $this->assertEquals('string', $this->castMember->getKeyType());
     }
 
+    public function testCastAttribute()
+    {
+        $this->assertEquals(
+            [
+                'name' => 'string',
+                'type' => 'integer',
+            ],
+            $this->castMember->getCasts());
+    }
+
     public function testIncrementingAttribute()
     {
         $this->assertFalse($this->castMember->getIncrementing());
