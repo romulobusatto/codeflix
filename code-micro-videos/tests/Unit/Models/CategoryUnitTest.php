@@ -51,6 +51,7 @@ class CategoryUnitTest extends TestCase
     {
         $this->assertEquals(
             [
+                'id' => 'string',
                 'is_active' => 'boolean'
             ],
             $this->category->getCasts());

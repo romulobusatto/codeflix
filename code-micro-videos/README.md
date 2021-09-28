@@ -20,6 +20,12 @@ $ docker-compose up
 http://localhost:8000
 ```
 
-## Apéndice
+Criar Model:
+```
+php artisan make:model Models/NameModel --all
+```
 
-Nosso aluno [Yuri Koster](https://github.com/yurikoster1) criou outra opção do repositório organizando melhor os arquivos Docker, se quiserem utilizar basta clonar o branch ```more_organized```.
+Criar Migrate
+```
+php artisan make:migration create_category_genre_table
+```

@@ -51,6 +51,7 @@ class CastMemberUnitTest extends TestCase
     {
         $this->assertEquals(
             [
+                'id' => 'string',
                 'name' => 'string',
                 'type' => 'integer',
             ],
